@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teleprompter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="setup-panel">
+      <h1>Teleprompter</h1>
+      <textarea id="script-input" placeholder="Type or paste your script here..."></textarea>
+      <div class="file-upload">
+        <input type="file" id="file-input" accept=".txt">
+        <label for="file-input">Upload .txt file</label>
+      </div>
+      <button id="start-btn">Start Teleprompter</button>
+    </div>
+    <div id="teleprompter-panel" class="hidden">
+      <div id="controls">
+        <button id="play-pause-btn">Play</button>
+        <label>Speed: <input type="range" id="speed-slider" min="1" max="10" value="5"></label>
+        <button id="exit-btn">Exit</button>
+        <button id="fullscreen-btn">Fullscreen</button>
+      </div>
+      <div id="script-display"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
