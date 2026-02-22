@@ -22,13 +22,13 @@ export default {
         container: "1280px",
       },
       animation: {
-        marquee: 'marquee var(--duration) linear infinite',
+        marquee: 'marquee 40s linear infinite',
         morph: 'morph 8s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
           from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+          to: { transform: 'translateX(calc(-100% - 2rem))' }
         },
         morph: {
           '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },

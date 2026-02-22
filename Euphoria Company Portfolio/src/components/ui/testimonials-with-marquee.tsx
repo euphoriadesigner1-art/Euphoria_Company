@@ -35,15 +35,21 @@ export function TestimonialsSection({
                 </div>
 
                 <div className="relative flex w-full flex-col items-center justify-center">
-                    <div className="group flex overflow-hidden p-4 [--gap:2rem] [gap:var(--gap)] flex-row [--duration:40s]">
-                        <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
-                            {[...Array(2)].map((_, setIndex) => (
-                                testimonials.map((testimonial, i) => (
-                                    <TestimonialCard
-                                        key={`${setIndex}-${i}`}
-                                        {...testimonial}
-                                    />
-                                ))
+                    <div className="group flex overflow-hidden p-4 gap-8 flex-row">
+                        <div className="flex shrink-0 justify-around gap-8 animate-marquee flex-row group-hover:[animation-play-state:paused]">
+                            {testimonials.map((testimonial, i) => (
+                                <TestimonialCard
+                                    key={`set1-${i}`}
+                                    {...testimonial}
+                                />
+                            ))}
+                        </div>
+                        <div className="flex shrink-0 justify-around gap-8 animate-marquee flex-row group-hover:[animation-play-state:paused]" aria-hidden="true">
+                            {testimonials.map((testimonial, i) => (
+                                <TestimonialCard
+                                    key={`set2-${i}`}
+                                    {...testimonial}
+                                />
                             ))}
                         </div>
                     </div>
