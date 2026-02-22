@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Process from './components/Process';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,7 +15,9 @@ function App() {
       <main>
         <Hero />
         <Services />
-        {/* Portfolio, How it Works, Testimonials will go here eventually */}
+        <Portfolio />
+        <Process />
+        <Testimonials />
       </main>
 
       <Footer />
