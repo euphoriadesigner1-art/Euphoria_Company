@@ -10,7 +10,7 @@ const Hero = () => {
             {/* Spline 3D Background */}
             <div className="absolute inset-0 z-0 bg-black">
                 <SplineScene
-                    scene="https://prod.spline.design/kZIGLNwjVniFIpVN/scene.splinecode"
+                    scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black pointer-events-none" />
