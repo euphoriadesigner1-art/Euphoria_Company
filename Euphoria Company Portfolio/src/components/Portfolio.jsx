@@ -8,42 +8,42 @@ const projects = [
         category: "Data Architecture & Automation",
         metrics: "Reduced processing time by 84%",
         icon: <Clock className="w-5 h-5 text-accent1" />,
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        image: "/fintech.png",
     },
     {
         title: "E-Commerce AI Chatbot",
         category: "AI Integration",
         metrics: "Increased conversion rate by 22%",
         icon: <TrendingUp className="w-5 h-5 text-accent2" />,
-        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop",
+        image: "/ecommerce.png",
     },
     {
         title: "Healthcare Portal Redesign",
         category: "Premium Web Dev",
         metrics: "100% HIPAA compliant infrastructure",
         icon: <ShieldCheck className="w-5 h-5 text-white" />,
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
+        image: "/health.png",
     },
     {
         title: "Logistics Routing Engine",
         category: "AI Integration",
         metrics: "Decreased fuel costs by 18%",
         icon: <Zap className="w-5 h-5 text-accent1" />,
-        image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?q=80&w=2070&auto=format&fit=crop",
+        image: "/logistics.png",
     },
     {
         title: "Cloud Infrastructure Audit",
         category: "Data Architecture & Automation",
         metrics: "Zero critical exploits found post-launch",
         icon: <Database className="w-5 h-5 text-accent2" />,
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop",
+        image: "/cloud_audit.png",
     },
     {
         title: "SaaS Platform Migration",
         category: "Premium Web Dev",
         metrics: "Handled 1M+ concurrent users",
         icon: <Globe className="w-5 h-5 text-white" />,
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+        image: "/saas.png",
     }
 ];
 
