@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { SplineScene } from './ui/spline-scene';

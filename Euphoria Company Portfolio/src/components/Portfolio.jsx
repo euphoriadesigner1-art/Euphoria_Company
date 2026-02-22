@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowUpRight, TrendingUp, Clock, ShieldCheck, Zap, Database, Globe } from 'lucide-react';
 
 import GalleryHoverCarousel from './ui/gallery-hover-carousel';

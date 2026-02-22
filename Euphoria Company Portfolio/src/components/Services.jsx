@@ -1,6 +1,5 @@
 import React from 'react';
 import { Cpu, Zap, Code2, Database, Shield, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { BeamsBackground } from './ui/beams-background';
 
 const services = [
