@@ -9,8 +9,13 @@ const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Spline 3D Background */}
             <div className="absolute inset-0 z-0 bg-black">
+                {/* 
+                  Alternative High-Quality Dark/Tech Spline Scenes:
+                  - "https://prod.spline.design/HqdfCmOueigtautT/scene.splinecode"
+                  - "https://prod.spline.design/GPrsdtalNeavkfxyT/scene.splinecode"
+                */}
                 <SplineScene
-                    scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"
+                    scene="/scene-clean.splinecode"
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black pointer-events-none" />
