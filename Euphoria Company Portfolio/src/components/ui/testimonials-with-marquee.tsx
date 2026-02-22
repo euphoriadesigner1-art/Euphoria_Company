@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { TestimonialCard, TestimonialAuthor } from "@/components/ui/testimonial-card"
+import { ShootingStars } from "@/components/ui/shooting-stars"
 
 interface TestimonialsSectionProps {
     title: React.ReactNode
@@ -24,7 +25,32 @@ export function TestimonialsSection({
             "py-24 px-0 overflow-hidden relative",
             className
         )}>
-            <div className="mx-auto flex w-full max-w-container flex-col items-center gap-16 text-center">
+            {/* Background with stars */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.03)_0%,rgba(0,0,0,0)_80%)]" />
+                <div className="stars absolute inset-0" />
+            </div>
+
+            <ShootingStars
+                starColor="#00F0FF"
+                trailColor="#FFD700"
+                minSpeed={12}
+                maxSpeed={32}
+                minDelay={1500}
+                maxDelay={3500}
+                className="z-0"
+            />
+            <ShootingStars
+                starColor="#ffffff"
+                trailColor="#00F0FF"
+                minSpeed={15}
+                maxSpeed={40}
+                minDelay={2500}
+                maxDelay={4500}
+                className="z-0"
+            />
+
+            <div className="mx-auto flex w-full max-w-container flex-col items-center gap-16 text-center relative z-10">
                 <div className="flex flex-col items-center gap-6 px-6">
                     <span className="inline-block text-accent1 text-xs font-bold tracking-[0.3em] uppercase">
                         Client Success

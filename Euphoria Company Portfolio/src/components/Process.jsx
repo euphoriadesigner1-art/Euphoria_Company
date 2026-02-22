@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ShootingStars } from './ui/shooting-stars';
 
 const steps = [
     {
@@ -22,8 +23,33 @@ const steps = [
 const Process = () => {
     return (
         <section id="process" className="relative py-24 px-6 bg-black overflow-hidden">
+            {/* Background with stars */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,rgba(0,0,0,0)_80%)]" />
+                <div className="stars absolute inset-0" />
+            </div>
+
             {/* Subtle Background Glow */}
-            <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent1/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent1/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 -translate-x-1/2 z-0" />
+
+            <ShootingStars
+                starColor="#FFD700"
+                trailColor="#00F0FF"
+                minSpeed={15}
+                maxSpeed={35}
+                minDelay={1000}
+                maxDelay={3000}
+                className="z-0"
+            />
+            <ShootingStars
+                starColor="#ffffff"
+                trailColor="#FFD700"
+                minSpeed={10}
+                maxSpeed={30}
+                minDelay={2000}
+                maxDelay={4000}
+                className="z-0"
+            />
 
             <div className="max-w-7xl mx-auto relative z-10">
 
