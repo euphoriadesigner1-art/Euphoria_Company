@@ -11,9 +11,9 @@ const Footer = () => {
         setStatus('sending');
 
         // TODO: Replace these with your actual IDs from EmailJS
-        const SERVICE_ID = 'YOUR_SERVICE_ID';
-        const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-        const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+        const SERVICE_ID = 'service_0r4mme8';
+        const TEMPLATE_ID = 'template_ma5wy1a';
+        const PUBLIC_KEY = 'UW2spK44Q4OkgLtJa';
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then((result) => {
@@ -40,7 +40,10 @@ const Footer = () => {
 
                     {/* Brand Col */}
                     <div>
-                        <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 tracking-tight">
+                        <span className="inline-block mb-6 text-accent2 text-xs font-bold tracking-[0.3em] uppercase">
+                            Initiate Contact
+                        </span>
+                        <h2 className="text-6xl md:text-8xl font-bold font-heading mb-6 tracking-tighter leading-[1.1]">
                             Ready to <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent1 to-yellow-200">
                                 Automate?

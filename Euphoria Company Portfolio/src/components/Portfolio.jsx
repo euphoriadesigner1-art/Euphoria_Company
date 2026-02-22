@@ -28,13 +28,20 @@ const projects = [
 
 const Portfolio = () => {
     return (
-        <section id="portfolio" className="relative py-24 px-6 bg-black border-t border-white/5">
-            <div className="max-w-7xl mx-auto">
+        <section id="portfolio" className="relative py-24 px-6 bg-black overflow-hidden">
+            {/* Seamless Edge Glow Transition */}
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent1/10 blur-[120px] rounded-[100%] pointer-events-none -translate-y-1/2 z-0" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">Featured Work</h2>
-                        <p className="text-white/60 max-w-lg">
+                        <span className="inline-block mb-4 text-accent2 text-xs font-bold tracking-[0.3em] uppercase">
+                            Our Portfolio
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tighter">Featured Work</h2>
+                        <p className="text-white/60 max-w-lg text-lg">
                             We don't just build websites; we engineer systems that drive measurable growth and operational efficiency.
                         </p>
                     </div>

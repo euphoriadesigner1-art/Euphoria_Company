@@ -28,8 +28,11 @@ const Process = () => {
             <div className="max-w-7xl mx-auto relative z-10">
 
                 <div className="text-center mb-20">
-                    <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">How We Work</h2>
-                    <p className="text-white/60">An elite process designed for speed and impact.</p>
+                    <span className="inline-block mb-4 text-accent1 text-xs font-bold tracking-[0.3em] uppercase">
+                        The Process
+                    </span>
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tighter">How We Work</h2>
+                    <p className="text-white/60 text-lg">An elite process designed for speed and impact.</p>
                 </div>
 
                 <div className="relative">
@@ -44,8 +47,21 @@ const Process = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}
-                                className="relative"
+                                className="relative group/card"
                             >
+                                {/* Active Scanner Line Decoration */}
+                                <div className="absolute -top-4 -left-4 -right-4 h-[1px] bg-transparent overflow-hidden opacity-0 group-hover/card:opacity-100 transition-opacity duration-700">
+                                    <motion.div
+                                        className="w-[150px] h-full bg-gradient-to-r from-transparent via-accent1 to-transparent"
+                                        animate={{ x: [-100, 500] }}
+                                        transition={{
+                                            repeat: Infinity,
+                                            duration: 2,
+                                            ease: "linear"
+                                        }}
+                                    />
+                                </div>
+
                                 {/* Node/Circle */}
                                 <div className="w-20 h-20 rounded-full bg-black border border-white/20 flex items-center justify-center mb-8 relative z-10 group cursor-default shadow-[0_0_15px_rgba(0,0,0,0.5)]">
                                     <div className="absolute inset-0 rounded-full bg-accent1/0 group-hover:bg-accent1/20 transition-colors duration-500" />
@@ -55,10 +71,12 @@ const Process = () => {
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                                <p className="text-white/60 leading-relaxed font-sans">
-                                    {step.description}
-                                </p>
+                                <div className="relative z-10 p-6 rounded-3xl bg-transparent border border-transparent group-hover/card:bg-white/[0.02] group-hover/card:border-white/5 transition-all duration-500">
+                                    <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                                    <p className="text-white/60 leading-relaxed font-sans">
+                                        {step.description}
+                                    </p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

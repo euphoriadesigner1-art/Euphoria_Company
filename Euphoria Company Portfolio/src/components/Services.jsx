@@ -31,11 +31,18 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="relative py-24 px-6 z-20 bg-black">
-            <div className="max-w-7xl mx-auto">
+        <section id="services" className="relative py-24 px-6 z-20 bg-black overflow-hidden">
+            {/* Seamless Edge Glow Transition */}
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent2/20 to-transparent z-10" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent2/5 blur-[120px] rounded-[100%] pointer-events-none -translate-y-1/2 z-0" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">Our Expertise</h2>
-                    <p className="text-white/60">Engineered for dominance in the digital age.</p>
+                    <span className="inline-block mb-4 text-accent2 text-xs font-bold tracking-[0.3em] uppercase">
+                        Capabilities
+                    </span>
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tighter">Our Expertise</h2>
+                    <p className="text-white/60 text-lg">Engineered for dominance in the digital age.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -26,7 +26,10 @@ export function TestimonialsSection({
         )}>
             <div className="mx-auto flex w-full max-w-container flex-col items-center gap-16 text-center">
                 <div className="flex flex-col items-center gap-6 px-6">
-                    <h2 className="max-w-[720px] text-3xl font-bold font-heading tracking-tight sm:text-5xl sm:leading-tight">
+                    <span className="inline-block text-accent1 text-xs font-bold tracking-[0.3em] uppercase">
+                        Client Success
+                    </span>
+                    <h2 className="max-w-[800px] text-4xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tighter sm:leading-[1.1]">
                         {title}
                     </h2>
                     <p className="max-w-2xl text-lg text-white/60 font-medium">
