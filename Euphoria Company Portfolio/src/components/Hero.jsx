@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 const Hero = () => {
     return (
@@ -62,11 +63,18 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <a href="#contact" className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                        <span className="relative z-10 font-semibold">Start Your Project</span>
-                        <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-accent1 to-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </a>
+                    <Button
+                        render={<a href="#contact" />}
+                        className="group active:scale-95 mx-auto flex cursor-pointer items-center justify-center gap-2 rounded-full border-none bg-transparent px-0 py-2 font-normal shadow-none hover:bg-transparent"
+                    >
+                        <span className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all duration-500 ease-in-out group-hover:bg-gradient-to-r group-hover:from-accent1 group-hover:to-yellow-300 w-full h-full flex items-center justify-center">
+                            Start Your Project
+                        </span>
+                        <div className="relative flex h-[60px] w-[60px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white text-black transition-all duration-500 ease-in-out group-hover:bg-yellow-300">
+                            <ArrowUpRight className="absolute h-6 w-6 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:-translate-y-10" />
+                            <ArrowUpRight className="absolute h-6 w-6 -translate-x-10 translate-y-10 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0" />
+                        </div>
+                    </Button>
                 </motion.div>
             </div>
         </section>
