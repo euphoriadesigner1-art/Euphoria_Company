@@ -49,6 +49,38 @@ const testimonials = [
             avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
         },
         text: "The premium web dev experience they provide is unmatched. They perfectly captured our brand's sleek, futuristic identity while ensuring lightning-fast load times."
+    },
+    {
+        author: {
+            name: "Julian Cross",
+            handle: "CEO, OmniVerse Web",
+            avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+        },
+        text: "Partnering with Euphoria Company completely elevated our digital presence. Their custom 3D web elements keep our users engaged 3x longer than before."
+    },
+    {
+        author: {
+            name: "Sophia Lin",
+            handle: "Lead Engineer, Quantum Logic",
+            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+        },
+        text: "The transition to a serverless architecture was flawless. Euphoria overhauled our database and API integrations without a single minute of unexpected downtime."
+    },
+    {
+        author: {
+            name: "Oliver Vance",
+            handle: "Founder, DataSync Pro",
+            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+        },
+        text: "I was blown away by their attention to detail. Every interaction, transition, and hover state feels carefully crafted. Pure glassmorphism perfection."
+    },
+    {
+        author: {
+            name: "Maya Bennett",
+            handle: "Director of Marketing, Stellar UI",
+            avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=face"
+        },
+        text: "Our conversion rates doubled just weeks after launch. Euphoria doesn't just design beautiful interfaces—they build highly optimized conversion machines."
     }
 ];
 
