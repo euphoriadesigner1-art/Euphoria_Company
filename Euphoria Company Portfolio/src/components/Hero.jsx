@@ -6,25 +6,14 @@ import { Button } from './ui/button';
 const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Background AI Core Effect */}
-            <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                    className="w-[600px] h-[600px] bg-accent2/20 rounded-full blur-[100px]"
-                    animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 90, 0],
-                        opacity: [0.3, 0.5, 0.3]
-                    }}
-                    transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/hero_section_v2.png"
+                    alt="Euphoria Company AI Architecture"
+                    className="w-full h-full object-cover opacity-50"
                 />
-                <motion.div
-                    className="w-[400px] h-[400px] bg-accent1/20 rounded-full blur-[80px] absolute"
-                    animate={{
-                        scale: [1, 1.5, 1],
-                        rotate: [0, -90, 0],
-                    }}
-                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black pointer-events-none" />
             </div>
 
             {/* Content Container */}
