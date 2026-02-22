@@ -11,6 +11,12 @@ export default {
         foreground: '#ffffff',
         accent1: '#FFD700', // Premium Gold
         accent2: '#00F0FF', // Electric Blue
+        card: '#111111',
+        border: '#333333',
+        primary: '#FFD700',
+        muted: '#222222',
+        'muted-foreground': '#888888',
+        'sidebar-border': '#333333',
       },
       fontFamily: {
         sans: ['"General Sans"', 'Inter', 'sans-serif'],

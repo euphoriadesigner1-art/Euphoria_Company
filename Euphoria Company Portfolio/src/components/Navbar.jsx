@@ -29,9 +29,9 @@ const Navbar = () => {
 
                 {/* CTA & Mobile Menu */}
                 <div className="flex items-center gap-4">
-                    <button className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-sm font-medium transition-all cursor-pointer">
+                    <a href="#contact" className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-sm font-medium transition-all cursor-pointer">
                         Contact Us
-                    </button>
+                    </a>
                     <button className="md:hidden p-2 text-white/70 hover:text-white cursor-pointer">
                         <Menu className="w-6 h-6" />
                     </button>

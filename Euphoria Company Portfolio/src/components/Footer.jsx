@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="relative border-t border-white/10 bg-black pt-24 pb-12 overflow-hidden">
+        <footer id="contact" className="relative border-t border-white/10 bg-black pt-24 pb-12 overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-accent2/10 blur-[120px] rounded-full pointer-events-none" />

@@ -9,9 +9,9 @@ const testimonials = [
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
     },
     {
-        quote: "The web architecture they delivered wasn't just beautiful; it was incredibly fast and secure. Our conversion rates spiked the day we launched.",
-        author: "Marcus Chen",
-        role: "Founder, Zenith E-Commerce",
+        quote: "Euphoria Company delivered an incredibly secure and high-performance architecture for our platform. They audited our systems, eliminated critical vulnerabilities, and built a flawless, scalable foundation for our growth.",
+        author: "Alex Mercer",
+        role: "Founder, www.viralyn.app",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
     }
 ];
