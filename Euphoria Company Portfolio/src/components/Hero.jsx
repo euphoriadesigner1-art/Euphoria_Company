@@ -65,14 +65,14 @@ const Hero = () => {
                 >
                     <Button
                         render={<a href="#contact" />}
-                        className="group active:scale-95 mx-auto flex cursor-pointer items-center justify-center gap-2 rounded-full border-none bg-transparent px-0 py-2 font-normal shadow-none hover:bg-transparent"
+                        className="group active:scale-95 mx-auto flex cursor-pointer items-center justify-center gap-1.5 rounded-full border-none bg-transparent px-0 py-1.5 font-normal shadow-none hover:bg-transparent"
                     >
-                        <span className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all duration-500 ease-in-out group-hover:bg-gradient-to-r group-hover:from-accent1 group-hover:to-yellow-300 w-full h-full flex items-center justify-center">
+                        <span className="rounded-full bg-white px-6 py-3 text-base font-semibold text-black transition-all duration-500 ease-in-out group-hover:bg-gradient-to-r group-hover:from-accent1 group-hover:to-yellow-300 w-full h-full flex items-center justify-center">
                             Start Your Project
                         </span>
-                        <div className="relative flex h-[60px] w-[60px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white text-black transition-all duration-500 ease-in-out group-hover:bg-yellow-300">
-                            <ArrowUpRight className="absolute h-6 w-6 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:-translate-y-10" />
-                            <ArrowUpRight className="absolute h-6 w-6 -translate-x-10 translate-y-10 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0" />
+                        <div className="relative flex h-[48px] w-[48px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white text-black transition-all duration-500 ease-in-out group-hover:bg-yellow-300">
+                            <ArrowUpRight className="absolute h-5 w-5 transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:-translate-y-10" />
+                            <ArrowUpRight className="absolute h-5 w-5 -translate-x-10 translate-y-10 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0" />
                         </div>
                     </Button>
                 </motion.div>
