@@ -16,3 +16,18 @@
   background: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
   filter: blur(60px);
 }
+
+@keyframes custom-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.animate-marquee-custom {
+  animation: custom-marquee 40s linear infinite;
+  will-change: transform;
+}
