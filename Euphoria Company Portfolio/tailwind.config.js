@@ -18,6 +18,18 @@ export default {
         'muted-foreground': '#888888',
         'sidebar-border': '#333333',
       },
+      maxWidth: {
+        container: "1280px",
+      },
+      animation: {
+        marquee: 'marquee var(--duration) linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+        }
+      },
       fontFamily: {
         sans: ['"General Sans"', 'Inter', 'sans-serif'],
         heading: ['Satoshi', 'Inter', 'sans-serif'],
