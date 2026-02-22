@@ -2,6 +2,47 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-accent1: #FFD700;
+  --color-accent2: #00F0FF;
+  --color-card: #111111;
+  --color-border: #333333;
+  --color-primary: #FFD700;
+  --color-muted: #222222;
+  --color-muted-foreground: #888888;
+  --color-sidebar-border: #333333;
+
+  --font-sans: "General Sans", Inter, sans-serif;
+  --font-heading: Satoshi, Inter, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-morph: morph 8s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - 2rem));
+    }
+  }
+
+  @keyframes morph {
+
+    0%,
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+  }
+}
+
 @layer base {
   body {
     @apply bg-black text-white antialiased overflow-x-hidden;
