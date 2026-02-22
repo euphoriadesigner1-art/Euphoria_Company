@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cpu, Zap, Code2, Database, Shield, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { BeamsBackground } from './ui/beams-background';
 
 const services = [
     {
@@ -35,6 +36,9 @@ const Services = () => {
             {/* Seamless Edge Glow Transition */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent2/20 to-transparent z-10" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent2/5 blur-[120px] rounded-[100%] pointer-events-none -translate-y-1/2 z-0" />
+
+            {/* Beams Background Overlay */}
+            <BeamsBackground intensity="medium" className="opacity-60" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">

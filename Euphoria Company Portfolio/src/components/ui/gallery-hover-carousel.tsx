@@ -4,6 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { BeamsBackground } from "@/components/ui/beams-background";
 import {
     Carousel,
     CarouselContent,
@@ -38,6 +39,9 @@ export default function GalleryHoverCarousel({
             {/* Seamless Edge Glow Transition */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent1/10 blur-[120px] rounded-[100%] pointer-events-none -translate-y-1/2 z-0" />
+
+            {/* Beams Background Overlay */}
+            <BeamsBackground intensity="subtle" className="opacity-40" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="mb-16 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
