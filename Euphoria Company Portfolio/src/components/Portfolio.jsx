@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, TrendingUp, Clock, ShieldCheck, Zap, Database, Globe } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Clock, ShieldCheck, Zap, Database, Globe, Smartphone, Layers, Video } from 'lucide-react';
 
 import GalleryHoverCarousel from './ui/gallery-hover-carousel';
 const projects = [
@@ -44,6 +44,27 @@ const projects = [
         metrics: "Handled 1M+ concurrent users",
         icon: <Globe className="w-5 h-5 text-white" />,
         image: "/saas.png",
+    },
+    {
+        title: "Enterprise Mobile App",
+        category: "Mobile Development",
+        metrics: "4.9 star rating across 50k+ users",
+        icon: <Smartphone className="w-5 h-5 text-accent1" />,
+        image: "/mobile_app.png",
+    },
+    {
+        title: "B2B SaaS Ecosystem",
+        category: "SaaS Development",
+        metrics: "Scaled to $2M ARR in 8 months",
+        icon: <Layers className="w-5 h-5 text-accent2" />,
+        image: "/b2b_saas.png",
+    },
+    {
+        title: "AI Video Generation",
+        category: "AI Integration",
+        metrics: "Processing 10k renders daily",
+        icon: <Video className="w-5 h-5 text-white" />,
+        image: "/ai_video.png",
     }
 ];
 
