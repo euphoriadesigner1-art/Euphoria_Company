@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
+    const form = useRef();
+    const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        // TODO: Replace these with your actual IDs from EmailJS
+        const SERVICE_ID = 'YOUR_SERVICE_ID';
+        const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+        const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                setStatus('success');
+                e.target.reset(); // Clear form on success
+                // Reset status back to idle after 3 seconds
+                setTimeout(() => setStatus('idle'), 3000);
+            }, (error) => {
+                console.log(error.text);
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 3000);
+            });
+    };
+
     return (
         <footer id="contact" className="relative border-t border-white/10 bg-black pt-24 pb-12 overflow-hidden">
 
@@ -30,21 +57,25 @@ const Footer = () => {
 
                     {/* Form Col */}
                     <div className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
-                        <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+                        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <label className="text-sm font-medium text-white/80" htmlFor="name">Name</label>
+                                <label className="text-sm font-medium text-white/80" htmlFor="user_name">Name</label>
                                 <input
                                     type="text"
-                                    id="name"
+                                    id="user_name"
+                                    name="user_name"
+                                    required
                                     placeholder="Jane Doe"
                                     className="bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all"
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <label className="text-sm font-medium text-white/80" htmlFor="email">Email</label>
+                                <label className="text-sm font-medium text-white/80" htmlFor="user_email">Email</label>
                                 <input
                                     type="email"
-                                    id="email"
+                                    id="user_email"
+                                    name="user_email"
+                                    required
                                     placeholder="jane@company.com"
                                     className="bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all"
                                 />
@@ -53,6 +84,8 @@ const Footer = () => {
                                 <label className="text-sm font-medium text-white/80" htmlFor="message">Message</label>
                                 <textarea
                                     id="message"
+                                    name="message"
+                                    required
                                     rows={4}
                                     placeholder="Tell us about your project..."
                                     className="bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent1/50 transition-all resize-none"
@@ -60,9 +93,18 @@ const Footer = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-accent1 hover:bg-yellow-400 text-black font-semibold py-4 rounded-xl transition-colors mt-2 cursor-pointer"
+                                disabled={status === 'sending'}
+                                className={`w-full font-semibold py-4 rounded-xl transition-all mt-2 cursor-pointer
+                                    ${status === 'sending' ? 'bg-white/20 text-white cursor-not-allowed' :
+                                        status === 'success' ? 'bg-green-500 text-white' :
+                                            status === 'error' ? 'bg-red-500 text-white' :
+                                                'bg-accent1 hover:bg-yellow-400 text-black'
+                                    }`}
                             >
-                                Send Message
+                                {status === 'sending' ? 'Sending...' :
+                                    status === 'success' ? 'Message Sent!' :
+                                        status === 'error' ? 'Failed to Send' :
+                                            'Send Message'}
                             </button>
                         </form>
                     </div>
