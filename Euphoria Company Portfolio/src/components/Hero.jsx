@@ -2,16 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { SplineScene } from './ui/spline-scene';
 
 const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/hero_section_v2.png"
-                    alt="Euphoria Company AI Architecture"
-                    className="w-full h-full object-cover opacity-50"
+            {/* Spline 3D Background */}
+            <div className="absolute inset-0 z-0 bg-black">
+                <SplineScene
+                    scene="https://prod.spline.design/kZIGLNwjVniFIpVN/scene.splinecode"
+                    className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black pointer-events-none" />
             </div>
