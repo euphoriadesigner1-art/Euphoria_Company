@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ShootingStars } from './ui/shooting-stars';
 
 const steps = [

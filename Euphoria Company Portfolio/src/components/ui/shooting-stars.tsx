@@ -79,9 +79,29 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
         return () => { };
     }, [minSpeed, maxSpeed, minDelay, maxDelay]);
 
+    const isVisibleRef = useRef(true);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isVisibleRef.current = entry.isIntersecting;
+            },
+            { threshold: 0 }
+        );
+
+        if (svgRef.current) {
+            observer.observe(svgRef.current);
+        }
+
+        return () => {
+            if (svgRef.current) observer.unobserve(svgRef.current);
+            observer.disconnect();
+        };
+    }, []);
+
     useEffect(() => {
         const moveStar = () => {
-            if (star) {
+            if (star && isVisibleRef.current) {
                 setStar((prevStar) => {
                     if (!prevStar) return null;
                     const newX =
@@ -109,10 +129,14 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
                     };
                 });
             }
+            // Always request next frame to keep loop alive to check visibility
+            animationFrameRef.current = requestAnimationFrame(moveStar);
         };
 
-        const animationFrame = requestAnimationFrame(moveStar);
-        return () => cancelAnimationFrame(animationFrame);
+        let animationFrameRef = { current: 0 };
+        animationFrameRef.current = requestAnimationFrame(moveStar);
+
+        return () => cancelAnimationFrame(animationFrameRef.current);
     }, [star]);
 
     return (

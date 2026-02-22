@@ -133,8 +133,24 @@ export function BeamsBackground({
             ctx.restore();
         }
 
+        let isVisible = true;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    animate(); // Resume animation when visible
+                }
+            },
+            { threshold: 0 } // Trigger right when it leaves/enters the viewport
+        );
+
+        if (canvas) {
+            observer.observe(canvas);
+        }
+
         function animate() {
-            if (!canvas || !ctx) return;
+            if (!canvas || !ctx || !isVisible) return;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.filter = "blur(35px)";
@@ -155,10 +171,12 @@ export function BeamsBackground({
             animationFrameRef.current = requestAnimationFrame(animate);
         }
 
-        animate();
+        // Initial trigger handled by IntersectionObserver
 
         return () => {
             window.removeEventListener("resize", updateCanvasSize);
+            if (canvas) observer.unobserve(canvas);
+            observer.disconnect();
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
@@ -190,6 +208,9 @@ export function BeamsBackground({
                 }}
                 style={{
                     backdropFilter: "blur(50px)",
+                    WebkitBackdropFilter: "blur(50px)",
+                    willChange: "opacity, transform",
+                    transform: "translateZ(0)"
                 }}
             />
         </div>

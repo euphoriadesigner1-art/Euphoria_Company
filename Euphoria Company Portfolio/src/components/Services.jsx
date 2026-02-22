@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Cpu, Zap, Code2, Database, Shield, Globe } from 'lucide-react';
 import { BeamsBackground } from './ui/beams-background';
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { SplineScene } from './ui/spline-scene';
@@ -20,9 +21,11 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black pointer-events-none" />
             </div>
 
-            {/* Content Container */}
             <div className="relative z-10 w-full max-w-5xl mx-auto px-6 mt-16 text-center">
-                <div className="bg-black/30 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 py-16 md:p-24 shadow-2xl relative overflow-hidden">
+                <div
+                    className="bg-black/30 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 py-16 md:p-24 shadow-2xl relative overflow-hidden"
+                    style={{ willChange: "transform, backdrop-filter", transform: "translateZ(0)" }}
+                >
                     {/* Inner subtle glow for the glass card */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-accent1/30 to-transparent" />
 
