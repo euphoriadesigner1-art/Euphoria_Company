@@ -15,7 +15,7 @@ const projects = [
         category: "AI Integration",
         metrics: "Increased conversion rate by 22%",
         icon: <TrendingUp className="w-5 h-5 text-accent2" />,
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop",
     },
     {
         title: "Healthcare Portal Redesign",
