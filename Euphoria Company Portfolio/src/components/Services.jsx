@@ -42,13 +42,14 @@ const Services = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className={`p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-accent1/50 transition-colors duration-300 cursor-pointer group ${service.colSpan}`}
+                            whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.15 }}
+                            className={`p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-accent1/50 hover:shadow-[0_0_30px_rgba(255,215,0,0.1)] transition-all duration-300 cursor-pointer group ${service.colSpan}`}
                         >
-                            <div className="mb-6 p-4 rounded-2xl bg-white/5 inline-block group-hover:bg-accent1/10 transition-colors duration-300">
+                            <div className="mb-6 p-4 rounded-2xl bg-white/5 inline-block group-hover:bg-accent1/10 group-hover:scale-110 transition-all duration-300">
                                 {service.icon}
                             </div>
                             <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
