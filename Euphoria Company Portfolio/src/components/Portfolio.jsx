@@ -31,17 +31,17 @@ const Portfolio = () => {
         <section id="portfolio" className="relative py-24 px-6 bg-black border-t border-white/5">
             <div className="max-w-7xl mx-auto">
 
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">Featured Work</h2>
                         <p className="text-white/60 max-w-lg">
                             We don't just build websites; we engineer systems that drive measurable growth and operational efficiency.
                         </p>
                     </div>
-                    <button className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-medium transition-colors cursor-pointer group">
+                    <a href="#portfolio" className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-medium transition-all active:scale-95 cursor-pointer group">
                         View All Projects
                         <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-                    </button>
+                    </a>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,11 +83,11 @@ const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center md:hidden">
-                    <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-medium transition-colors cursor-pointer group">
+                <div className="mt-12 w-full md:hidden flex justify-center px-2">
+                    <a href="#portfolio" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-medium transition-all active:scale-95 cursor-pointer group">
                         View All Projects
                         <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-                    </button>
+                    </a>
                 </div>
 
             </div>
