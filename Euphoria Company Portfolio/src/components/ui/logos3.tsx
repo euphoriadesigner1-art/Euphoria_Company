@@ -51,7 +51,7 @@ const Logos3 = ({
         {
             id: "logo-5",
             description: "shadcn/ui",
-            image: "https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico",
+            image: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/shadcnui.svg",
             className: "h-7 w-auto",
         },
         {
